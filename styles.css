@@ -23,6 +23,11 @@ header {
 
 nav {
     text-align: center;
+    transition: background 0.3s ease; /* Smooth background transition */
+}
+
+nav.sticky {
+    background: linear-gradient(to right, #ffd700, #ffd700); /* Gold gradient background on sticky */
 }
 
 nav ul {
@@ -34,6 +39,7 @@ nav ul {
 
 nav ul li {
     margin-right: 20px;
+    transition: transform 0.3s ease;
 }
 
 a {
@@ -51,6 +57,18 @@ a:hover {
     color: #333;
     text-align: center;
     padding: 100px 0;
+    animation: fadeInUp 1s ease; /* Fade in animation */
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .hero h1 {
@@ -73,6 +91,18 @@ section h2 {
     border-bottom: 2px solid #ffd700;
     padding-bottom: 10px;
     margin-bottom: 20px;
+    animation: fadeInDown 1s ease; /* Fade in animation */
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 section p {
@@ -89,6 +119,16 @@ section p {
     padding: 100px 0;
     text-align: center;
     color: rgba(255, 255, 255, 0.9); /* Slightly opaque white text */
+    animation: fadeIn 1s ease; /* Fade in animation */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .parallax h2 {
@@ -101,6 +141,20 @@ section p {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    opacity: 0; /* Set initial opacity to 0 for entrance animation */
+    animation: fadeInUpCards 1s ease forwards; /* Fade in and move up animation */
+
+}
+
+@keyframes fadeInUpCards {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .card {
@@ -127,6 +181,18 @@ section p {
     bottom: 0;
     width: 100%;
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeInFooter 1s ease; /* Fade in animation */
+}
+
+@keyframes fadeInFooter {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Social Media Links */
@@ -152,6 +218,16 @@ section p {
     border-radius: 50%;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+    animation: pulse 1s infinite; /* Pulse animation */
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
 }
 
 .social-media-links a:hover {
